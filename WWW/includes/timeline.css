@@ -29,6 +29,7 @@ body {
 }
 
 .timeline .panel_container {
+	overflow: hidden;
 	position: relative; 
 	margin: 10px 0px 0px 0px; 
 	width: 100%; 
@@ -58,10 +59,12 @@ body {
 
 .timeline .panel_slider {
 	width: 100%;
+	position: absolute;
 }
 
 .timeline .panel {
 	width: 340px;
+	position: absolute;
 }
 
 .timeline .panel_content {
@@ -89,4 +92,137 @@ body {
 	color: rgba(255,255,255,.2);
 	text-align: right;
 	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.timeline nav {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	text-align: center;
+	width: inherit;
+}
+
+.timeline nav a {
+	color: #fff;
+	font-size: .9em;
+	display: inline-block;
+	padding: 5px 10px;
+	border-color: #fff;
+	border-style: solid;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-bottom-width: 0px;
+	border-top-width: 8px;
+	text-decoration: none;
+}
+
+.timeline nav a:first-child {
+	border-left-width: 8px;
+}
+
+.timeline nav a:last-child {
+	border-right-width: 8px;
+}
+
+.timeline nav a.selected {
+	background-color: rgba(255,255,255,.55);
+}
+
+.timeline .panel img.arpanet {
+	margin: 0px 0px 10px 0px;
+}
+
+.timeline .panel img.tcp {
+	float: left;
+	margin: 10px 20px 0px 0px;
+}
+
+.timeline .panel img.tcp_ip {
+	float: left;
+	margin-right: 20px;
+}
+
+.timeline .panel img.www {
+	float: left;
+	margin: 10px 15px 0px 0px;
+}
+
+.timeline .panel img.voip {
+	float: right;
+	margin: 10px 0px 0px 10px;
+}
+
+.timeline .panel img.telecommunications_usage {
+	float: right;
+	margin: 10px 30px 0px 10px;
+}
+
+.clear_both {
+	clear: both;
+}
+
+@media screen and (max-width: 500px) {
+	.timeline {
+		margin: 0px;
+		background: #81194c url(../images/background_small.jpg) no-repeat center 0px;
+	}
+	
+	.timeline h1 {
+		text-align: left;
+		padding: 10px 10px 10px 20px;
+	}
+	
+	.timeline .panel_container {
+		height: auto;
+		background: none;
+		filter: none;
+		margin: 0px;
+	}
+	
+	.timeline .panel_slider {
+		position: static;
+		height: auto;
+	}
+	
+	.timeline .panel {
+		width: auto;
+		height: auto;
+		position: static;
+		border-top: 1px solid rgba(255,255,255,.3);
+		padding-bottom: 20px;
+	}
+	
+	.timeline nav {
+		display: none;
+	}
+	
+	.timeline .background_slider {
+		display: none;
+	}
+	
+	.timeline .panel:first-child {
+		padding-top: 40px;
+	}
+	
+	.timeline .panel_content {
+		padding-top: 60px;
+	}
+	
+	.timeline .panel_content .label {
+		top: -10px;
+		right: 10px;
+	}
+	
+	.timeline .panel img.www {
+		margin: 0px 25px 0px 0px;
+	}
+	
+	.timeline .panel img.voip {
+		margin: 10px 40px 0px 20px;
+	}
+	
+	.timeline .panel img.telecommunications_usage {
+		float: left;
+		margin: 10px 15px 0px 0px;
+	}
 }
